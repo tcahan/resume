@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Education]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[ResumeId] INT NOT NULL,
+	[School] NVARCHAR(100) NOT NULL,
+	[Degree] NVARCHAR(100) NOT NULL,
+	[Major] NVARCHAR(100) NOT NULL,
+	[GraduationDate] DATE NOT NULL,
+)

@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Experience]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[ResumeId] INT NOT NULL,
+	[Company] NVARCHAR(100) NOT NULL,
+	[Location] NVARCHAR(100) NOT NULL,
+)

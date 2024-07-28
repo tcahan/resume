@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Proficiency]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[ResumeId] INT NOT NULL,
+	[Skill] NVARCHAR(100) NOT NULL,
+)
