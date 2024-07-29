@@ -8,7 +8,7 @@ The goal of this project is to ultimately contain the following:
 - [ ] Hosted application version of my resume
   - [ ] Web site built using React and/or Blazor to dynamically display the resume and provide an admin section for updates
   - [ ] Web API built in .NET 8 (or newer) in order to be agnostic to the front end
-  - [ ] SQL Server database (possibly sqlite to avoid hosting costs)
+  - [X] SQL Server database (possibly sqlite to avoid hosting costs)
   - [ ] Hosted on Azure free tier or personal host
 - [ ] Nice to haves, time permitting
   - [ ] CI/CD pipeline for easy updates
