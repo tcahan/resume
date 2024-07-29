@@ -4,7 +4,8 @@
 	@School NVARCHAR(100),
 	@Degree NVARCHAR(100),
 	@Major NVARCHAR(100),
-	@GraduationDate DATE
+	@GraduationDate DATE,
+	@Location NVARCHAR(100)
 AS
 BEGIN
 	UPDATE
@@ -13,7 +14,8 @@ BEGIN
 		[School] = @School,
 		[Degree] = @Degree,
 		[Major] = @Major,
-		[GraduationDate] = @GraduationDate
+		[GraduationDate] = @GraduationDate,
+		[Location] = @Location
 	WHERE
 		[Id] = @Id
 		AND [ResumeId] = @ResumeId

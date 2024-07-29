@@ -2,7 +2,7 @@
 AS
 BEGIN
 	SELECT
-		[Id], [ResumeId], [School], [Degree], [Major], [GraduationDate]
+		[Id], [ResumeId], [School], [Degree], [Major], [GraduationDate], [Location]
 	FROM
 		dbo.Education
 END
