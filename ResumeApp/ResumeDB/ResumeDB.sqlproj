@@ -58,6 +58,13 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="StoredProcedures" />
+    <Folder Include="StoredProcedures\CoreSkill" />
+    <Folder Include="StoredProcedures\Education" />
+    <Folder Include="StoredProcedures\Experience" />
+    <Folder Include="StoredProcedures\ExperienceDetail" />
+    <Folder Include="StoredProcedures\ExperienceTitle" />
+    <Folder Include="StoredProcedures\Proficiency" />
+    <Folder Include="StoredProcedures\Resume" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Resume.sql" />
@@ -67,6 +74,48 @@
     <Build Include="Tables\Experience.sql" />
     <Build Include="Tables\ExperienceTitle.sql" />
     <Build Include="Tables\ExperienceDetail.sql" />
+    <Build Include="StoredProcedures\Resume\spResume_Delete.sql" />
+    <Build Include="StoredProcedures\Resume\spResume_Get.sql" />
+    <Build Include="StoredProcedures\Resume\spResume_GetAll.sql" />
+    <Build Include="StoredProcedures\Resume\spResume_Insert.sql" />
+    <Build Include="StoredProcedures\Resume\spResume_Update.sql" />
+    <Build Include="StoredProcedures\CoreSkill\spCoreSkill_Delete.sql" />
+    <Build Include="StoredProcedures\CoreSkill\spCoreSkill_DeleteAllByResume.sql" />
+    <Build Include="StoredProcedures\CoreSkill\spCoreSkill_Get.sql" />
+    <Build Include="StoredProcedures\CoreSkill\spCoreSkill_GetAll.sql" />
+    <Build Include="StoredProcedures\CoreSkill\spCoreSkill_GetAllByResume.sql" />
+    <Build Include="StoredProcedures\CoreSkill\spCoreSkill_Insert.sql" />
+    <Build Include="StoredProcedures\CoreSkill\spCoreSkill_Update.sql" />
+    <Build Include="StoredProcedures\Education\spEducation_Delete.sql" />
+    <Build Include="StoredProcedures\Education\spEducation_DeleteAllByResume.sql" />
+    <Build Include="StoredProcedures\Education\spEducation_GetAll.sql" />
+    <Build Include="StoredProcedures\Education\spEducation_Insert.sql" />
+    <Build Include="StoredProcedures\Education\spEducation_Update.sql" />
+    <Build Include="StoredProcedures\Education\spEducation_GetAllByResume.sql" />
+    <Build Include="StoredProcedures\Experience\spExperience_Delete.sql" />
+    <Build Include="StoredProcedures\Experience\spExperience_DeleteAllByResume.sql" />
+    <Build Include="StoredProcedures\Experience\spExperience_Get.sql" />
+    <Build Include="StoredProcedures\Experience\spExperience_GetAllByResume.sql" />
+    <Build Include="StoredProcedures\Experience\spExperience_Insert.sql" />
+    <Build Include="StoredProcedures\Experience\spExperience_Update.sql" />
+    <Build Include="StoredProcedures\ExperienceDetail\spExperienceDetail_Delete.sql" />
+    <Build Include="StoredProcedures\ExperienceDetail\spExperienceDetail_Get.sql" />
+    <Build Include="StoredProcedures\ExperienceDetail\spExperienceDetail_GetAllByExperience.sql" />
+    <Build Include="StoredProcedures\ExperienceDetail\spExperienceDetail_Insert.sql" />
+    <Build Include="StoredProcedures\ExperienceDetail\spExperienceDetail_Update.sql" />
+    <Build Include="StoredProcedures\ExperienceTitle\spExperienceTitle_Delete.sql" />
+    <Build Include="StoredProcedures\ExperienceTitle\spExperienceTitle_Get.sql" />
+    <Build Include="StoredProcedures\ExperienceTitle\spExperienceTitle_GetAllByExperience.sql" />
+    <Build Include="StoredProcedures\ExperienceDetail\spExperienceDetail_DeleteAllByExperience.sql" />
+    <Build Include="StoredProcedures\ExperienceTitle\spExperienceTitle_DeleteAllByExperience.sql" />
+    <Build Include="StoredProcedures\ExperienceTitle\spExperienceTitle_Insert.sql" />
+    <Build Include="StoredProcedures\ExperienceTitle\spExperienceTitle_Update.sql" />
+    <Build Include="StoredProcedures\Proficiency\spProficiency_Delete.sql" />
+    <Build Include="StoredProcedures\Proficiency\spProficiency_DeleteAllByResume.sql" />
+    <Build Include="StoredProcedures\Proficiency\spProficiency_Get.sql" />
+    <Build Include="StoredProcedures\Proficiency\spProficiency_GetAllByResume.sql" />
+    <Build Include="StoredProcedures\Proficiency\spProficiency_Insert.sql" />
+    <Build Include="StoredProcedures\Proficiency\spProficiency_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ResumeDB.publish.xml" />
