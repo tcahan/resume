@@ -17,6 +17,14 @@ The goal of this project is to ultimately contain the following:
   - [ ] Direct contact form with spam protection
   - [ ] Custom domain with TLS
 
+### Simple Demo Instructions (to be expanded later upon completion)
+
+1. Clone repository
+2. Open project in Visual Studio
+3. Publish the ResumeDB project to your SQL server of choice (Note that it may be necessary to change the target platfrom from SQL Server 2019 depending on your setup)
+4. Run the ResumeAPI project
+5. Swagger (OpenAPI) will be displayed for testing (endpoint implementation coming soon)
+
 ---
 
 # Timothy Cahan
