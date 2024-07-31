@@ -22,8 +22,13 @@ The goal of this project is to ultimately contain the following:
 1. Clone repository
 2. Open project in Visual Studio
 3. Publish the ResumeDB project to your SQL server of choice (Note that it may be necessary to change the target platfrom from SQL Server 2019 depending on your setup)
-4. Run the ResumeAPI project
-5. Swagger (OpenAPI) will be displayed for testing (endpoint implementation coming soon)
+4. Configure the connection string for you database
+   1. Get the connection string for the created database
+   2. Right click on the _ResumeAPI_ project and select _Manage User Secrets_ (you may skip this step and go directly to step 4 if preferred)
+   3. Copy the connection string section from the _appsettings.json_ to the secrets file
+   4. Fill in the value for the _Default_ connection with the connection string for the database
+5. Run the ResumeAPI project
+6. Swagger (OpenAPI) will be displayed for testing (endpoint implementation coming soon)
 
 ---
 
