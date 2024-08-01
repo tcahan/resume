@@ -1,3 +1,4 @@
+using AspNetCoreRateLimit;
 using Microsoft.OpenApi.Models;
 using ResumeAPI.StartupConfig;
 
@@ -7,6 +8,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.AddSwaggerServices();
 builder.AddVersioningServices();
+builder.AddRateLimitServices();
 
 var app = builder.Build();
 
@@ -25,5 +27,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseIpRateLimiting();
 
 app.Run();
