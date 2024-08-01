@@ -1,11 +1,11 @@
 ﻿CREATE PROCEDURE [dbo].[spProficiency_Insert]
 	@ResumeId INT,
-	@Skill NVARCHAR(100)
+	@Category NVARCHAR(100)
 AS
 BEGIN
 	INSERT INTO
 		dbo.Proficiency
-			([ResumeId], [Skill])
+			([ResumeId], [Category])
 	VALUES
-		(@ResumeId, @Skill)
+		(@ResumeId, @Category)
 END

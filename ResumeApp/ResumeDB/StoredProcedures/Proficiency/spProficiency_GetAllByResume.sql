@@ -3,7 +3,7 @@
 AS
 BEGIN
 	SELECT
-		[Id], [ResumeId], [Skill]
+		[Id], [ResumeId], [Category]
 	FROM
 		dbo.Proficiency
 	WHERE

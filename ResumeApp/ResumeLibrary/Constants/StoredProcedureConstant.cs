@@ -72,4 +72,14 @@ public static class StoredProcedureConstant
 		public const string Proficiency_Delete = "dbo.spProficiency_Delete";
 		public const string Proficiency_DeleteAllByResume = "dbo.spProficiency_DeleteAllByResume";
 	}
+
+	public static class ProficiencySkill
+	{
+		public const string ProficiencySkill_GetAllByProficiency = "dbo.spProficiencySkill_GetAllByProficiency";
+		public const string ProficiencySkill_Get = "dbo.spProficiencySkill_Get";
+		public const string ProficiencySkill_Insert = "dbo.spProficiencySkill_Insert";
+		public const string ProficiencySkill_Update = "dbo.spProficiencySkill_Update";
+		public const string ProficiencySkill_Delete = "dbo.spProficiencySkill_Delete";
+		public const string ProficiencySkill_DeleteAllByProficiency = "dbo.spProficiency_DeleteAllByProficiency";
+	}
 }

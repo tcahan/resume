@@ -2,8 +2,21 @@
 	@ResumeId INT
 AS
 BEGIN
-	DELETE FROM
-		dbo.Proficiency
-	WHERE
-		[ResumeId] = @ResumeId
+	BEGIN TRANSACTION
+		BEGIN TRY
+			DELETE FROM
+				dbo.ProficiencySkill
+			WHERE
+				[ProficiencyId] IN (SELECT [Id] FROM dbo.Proficiency WHERE [ResumeId] = @ResumeId);
+
+			DELETE FROM
+				dbo.Proficiency
+			WHERE
+				[ResumeId] = @ResumeId
+
+			COMMIT TRANSACTION;
+		END TRY
+		BEGIN CATCH
+			ROLLBACK TRANSACTION;
+		END CATCH
 END

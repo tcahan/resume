@@ -2,8 +2,13 @@
 	@Id INT
 AS
 BEGIN
-	DELETE FROM
+	BEGIN TRANSACTION
+		EXEC spProficiencySkill_DeleteAllByProficiency @ProficiencyId = @Id;
+
+		DELETE FROM
 		dbo.Proficiency
 	WHERE
 		[Id] = @Id
+
+	COMMIT TRANSACTION;	
 END

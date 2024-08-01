@@ -65,6 +65,8 @@
     <Folder Include="StoredProcedures\ExperienceTitle" />
     <Folder Include="StoredProcedures\Proficiency" />
     <Folder Include="StoredProcedures\Resume" />
+    <Folder Include="PostDeploy" />
+    <Folder Include="StoredProcedures\ProficiencySkill" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Resume.sql" />
@@ -116,8 +118,19 @@
     <Build Include="StoredProcedures\Proficiency\spProficiency_GetAllByResume.sql" />
     <Build Include="StoredProcedures\Proficiency\spProficiency_Insert.sql" />
     <Build Include="StoredProcedures\Proficiency\spProficiency_Update.sql" />
+    <Build Include="Tables\ProficiencySkill.sql" />
+    <Build Include="StoredProcedures\ProficiencySkill\spProficiencySkill_Delete.sql" />
+    <Build Include="StoredProcedures\ProficiencySkill\spProficiencySkill_Get.sql" />
+    <Build Include="StoredProcedures\ProficiencySkill\spProficiencySkill_GetAllByProficiency.sql" />
+    <Build Include="StoredProcedures\ProficiencySkill\spProficiencySkill_Insert.sql" />
+    <Build Include="StoredProcedures\ProficiencySkill\spProficiencySkill_Update.sql" />
+    <Build Include="StoredProcedures\ProficiencySkill\spProficiencySkill_DeleteAllByProficiency.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ResumeDB.publish.xml" />
+    <PostDeploy Include="PostDeploy\SeedResumeData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ResumeDB.refactorlog" />
   </ItemGroup>
 </Project>
