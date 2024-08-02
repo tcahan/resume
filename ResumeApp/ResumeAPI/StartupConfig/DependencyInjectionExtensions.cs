@@ -1,10 +1,44 @@
 ﻿using AspNetCoreRateLimit;
+using HealthChecks.ApplicationStatus.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using ResumeAPI.HealthChecks;
 
 namespace ResumeAPI.StartupConfig;
 
+/// <summary>
+/// Extension methods for adding services to the WebApplicationBuilder to keep 
+/// the Program.cs file clean and readable.
+/// </summary>
 public static class DependencyInjectionExtensions
 {
+	/// <summary>
+	/// Adds health check services to the WebApplicationBuilder
+	/// </summary>
+	/// <param name="builder">WebApplicationBuilder to be passed in from Program.cs</param>
+	public static void AddHealthCheckServices(this WebApplicationBuilder builder)
+	{
+
+		builder.Services.AddHealthChecks()
+			.AddCheck<SiteHealthCheck>("General Health Check")
+			.AddApplicationStatus()
+			.AddSqlServer(builder.Configuration.GetConnectionString("Default"))
+			.AddDiskStorageHealthCheck(opts =>
+			{
+				opts.AddDrive("C:\\", 256);
+			});
+
+		builder.Services.AddHealthChecksUI(opts =>
+		{
+			opts.AddHealthCheckEndpoint("api", "/health");
+			opts.SetEvaluationTimeInSeconds(60);
+			opts.SetMinimumSecondsBetweenFailureNotifications(10);
+		}).AddInMemoryStorage();
+	}
+
+	/// <summary>
+	/// Adds rate limit services to the WebApplicationBuilder
+	/// </summary>
+	/// <param name="builder">WebApplicationBuilder to be passed in from Program.cs</param>
 	public static void AddRateLimitServices(this WebApplicationBuilder builder)
 	{
 		builder.Services.AddMemoryCache();
@@ -17,6 +51,10 @@ public static class DependencyInjectionExtensions
 		builder.Services.AddInMemoryRateLimiting();
 	}
 
+	/// <summary>
+	/// Adds Swagger services to the WebApplicationBuilder
+	/// </summary>
+	/// <param name="builder">WebApplicationBuilder to be passed in from Program.cs</param>
 	public static void AddSwaggerServices(this WebApplicationBuilder builder)
 	{
 		builder.Services.AddSwaggerGen(opts =>
@@ -40,6 +78,10 @@ public static class DependencyInjectionExtensions
 		});
 	}
 
+	/// <summary>
+	/// Adds versioning services to the WebApplicationBuilder
+	/// </summary>
+	/// <param name="builder">WebApplicationBuilder to be passed in from Program.cs</param>
 	public static void AddVersioningServices(this WebApplicationBuilder builder)
 	{
 		builder.Services.AddApiVersioning(opts =>

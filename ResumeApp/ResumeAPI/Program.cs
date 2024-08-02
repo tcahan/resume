@@ -1,5 +1,6 @@
 using AspNetCoreRateLimit;
-using Microsoft.OpenApi.Models;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using ResumeAPI.StartupConfig;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.AddSwaggerServices();
 builder.Services.AddResponseCaching();
 builder.AddVersioningServices();
 builder.AddRateLimitServices();
+builder.AddHealthCheckServices();
 
 var app = builder.Build();
 
@@ -30,6 +32,12 @@ app.UseResponseCaching();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseHealthChecks("/health", new HealthCheckOptions
+{
+	ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
+app.MapHealthChecksUI();
 
 app.UseIpRateLimiting();
 

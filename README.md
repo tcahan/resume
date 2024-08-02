@@ -21,7 +21,7 @@ The goal of this project is to ultimately contain the following:
 
 1. Clone repository
 2. Open project in Visual Studio
-3. Publish the ResumeDB project to your SQL server of choice (Note that it may be necessary to change the target platfrom from SQL Server 2019 depending on your setup)
+3. Publish the ResumeDB project to your SQL server of choice (Note that it may be necessary to change the target platfrom from SQL Server 2019 depending on your setup). This will seed the database with my default resume!
 4. Configure the connection string for you database
    1. Get the connection string for the created database
    2. Right click on the _ResumeAPI_ project and select _Manage User Secrets_ (you may skip this step and go directly to step 4 if preferred)
@@ -29,6 +29,7 @@ The goal of this project is to ultimately contain the following:
    4. Fill in the value for the _Default_ connection with the connection string for the database
 5. Run the ResumeAPI project
 6. Swagger (OpenAPI) will be displayed for testing (endpoint implementation coming soon)
+7. View health by navigating to https://localhost:7112/health (json) or https://localhost:7112/healthchecks-ui (UI Page). Replace base url/port as needed for your config.
 
 ---
 
