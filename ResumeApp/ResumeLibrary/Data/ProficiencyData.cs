@@ -34,7 +34,7 @@ public class ProficiencyData : IProficiencyData
 	public async Task InsertProficiency(ProficiencyModel proficiency)
 	{
 		await _sql.SaveDataAsync(StoredProcedureConstant.Proficiency.Proficiency_Insert,
-			new { proficiency.ResumeId, proficiency.Skill });
+			new { proficiency.ResumeId, proficiency.Category });
 	}
 
 	public async Task DeleteProficiency(int id)
