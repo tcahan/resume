@@ -21,7 +21,7 @@ public static class DependencyInjectionExtensions
 		builder.Services.AddHealthChecks()
 			.AddCheck<SiteHealthCheck>("General Health Check")
 			.AddApplicationStatus()
-			.AddSqlServer(builder.Configuration.GetConnectionString("Default"))
+			.AddSqlServer(builder.Configuration.GetConnectionString("Default") ?? "Default")
 			.AddDiskStorageHealthCheck(opts =>
 			{
 				opts.AddDrive("C:\\", 256);
