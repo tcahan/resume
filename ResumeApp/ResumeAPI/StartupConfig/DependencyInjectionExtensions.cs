@@ -97,6 +97,11 @@ public static class DependencyInjectionExtensions
 			});
 	}
 
+	/// <summary>
+	/// Adds CORS configuration to the WebApplicationBuilder
+	/// This sets the allowed origins and methods from the appsettings.json file
+	/// </summary>
+	/// <param name="builder">WebApplicationBuilder to be passed in from Program.cs</param>
 	public static void AddCorsConfiguration(this WebApplicationBuilder builder)
 	{
 		builder.Services.AddCors(opts =>
