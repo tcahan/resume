@@ -96,4 +96,19 @@ public static class DependencyInjectionExtensions
 				opts.SubstituteApiVersionInUrl = true;
 			});
 	}
+
+	public static void AddCorsConfiguration(this WebApplicationBuilder builder)
+	{
+		builder.Services.AddCors(opts =>
+		{
+			opts.AddDefaultPolicy(policy =>
+			{
+				var origins = builder.Configuration.GetValue<string>("CorsPolicy:AllowedOrigins");
+				var methods = builder.Configuration.GetValue<string>("CorsPolicy:AllowedMethods");
+				policy.WithOrigins(origins.Split(','))
+					.WithMethods(methods.Split(','))
+					.AllowAnyHeader();
+			});
+		});
+	}
 }

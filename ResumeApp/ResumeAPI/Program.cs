@@ -12,6 +12,7 @@ builder.Services.AddResponseCaching();
 builder.AddVersioningServices();
 builder.AddRateLimitServices();
 builder.AddHealthCheckServices();
+builder.AddCorsConfiguration();
 
 var app = builder.Build();
 
@@ -26,6 +27,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseResponseCaching();
 
