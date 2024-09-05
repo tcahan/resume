@@ -104,6 +104,7 @@ BEGIN
 	INSERT INTO dbo.ProficiencySkill ([ProficiencyId],[Skill]) VALUES(@ProficiencyId, 'Telerik')
 	INSERT INTO dbo.ProficiencySkill ([ProficiencyId],[Skill]) VALUES(@ProficiencyId, 'jQuery')
 	INSERT INTO dbo.ProficiencySkill ([ProficiencyId],[Skill]) VALUES(@ProficiencyId, 'AJAX Control Toolkit')
+	INSERT INTO dbo.ProficiencySkill ([ProficiencyId],[Skill]) VALUES(@ProficiencyId, 'Angular')
 	INSERT INTO dbo.ProficiencySkill ([ProficiencyId],[Skill]) VALUES(@ProficiencyId, 'React.js')
 	INSERT INTO dbo.ProficiencySkill ([ProficiencyId],[Skill]) VALUES(@ProficiencyId, 'Laravel')
 	INSERT INTO dbo.ProficiencySkill ([ProficiencyId],[Skill]) VALUES(@ProficiencyId, 'Marionette.js')
