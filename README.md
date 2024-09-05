@@ -109,7 +109,7 @@ Software Design and Architecture | Scalable Web Solutions | Secure Web Developme
 ## PROFICIENCIES
 
 - Azure - App Services, SQL, Functions, CosmosDB, Key Vault, VM, Search, Cache for Redis, Application Insights, Kubernetes Services, Storage, Service Bus, SignalR
-- Frameworks and Technologies - ASP.NET Web Forms, MVC/Razor Pages, Blazor, Web API, Entity Framework, Dapper, HTML, CSS, Telerik, jQuery, AJAX Control Toolkit, React.js, Laravel, Marionette.js
+- Frameworks and Technologies - ASP.NET Web Forms, MVC/Razor Pages, Blazor, Web API, Entity Framework, Dapper, HTML, CSS, Telerik, jQuery, AJAX Control Toolkit, Angular, React.js, Laravel, Marionette.js
 - Languages - C#, VB.NET, JavaScript, PHP
 - Databases - MS SQL Server, Oracle, MySQL
 - Software - Visual Studio, VS Code, Azure DevOps, Team Foundation Server, JIRA, Git, NuGet, npm, Yarn, Lightroom, Photoshop, Visual Source Safe, Acrobat, Fusion Pro
